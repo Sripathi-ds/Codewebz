@@ -1,0 +1,9 @@
+.frame_component{
+    min-height: 300px;
+   
+}
+.frame_fill{
+    background-color: #0E1424;
+    display: block;
+    height: 30px;
+}
