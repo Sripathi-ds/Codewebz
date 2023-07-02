@@ -12,7 +12,8 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-
+import { Link } from '@mui/material';
+import Style from '../../assets/css/header/Navbar.module.css'
 const pages = ['All Theme', 'Our Services', 'About Us', 'Order Now', 'Contact Us'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -53,6 +54,7 @@ function ResponsiveAppBar() {
                                 fontWeight: 700,
                                 color: '#0E1424',
                                 textDecoration: 'none',
+                                
                             }}
                         >
                             Codewebz
@@ -118,18 +120,18 @@ function ResponsiveAppBar() {
                         </Typography>
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
                             {pages.map((page) => (
-                                <Button
+                                <Link
                                     key={page}
                                     onClick={handleCloseNavMenu}
-                                    sx={{ my: 2, color: '#0E1424', display: 'block', textTransform: 'capitalize' }}
+                                    sx={{ my: 2, color: '#0E1424', display: 'block', textTransform: 'capitalize', fontFamily:'Merienda' , textDecoration:'none' , px: 2 ,cursor: 'pointer' }}
                                 >
                                     {page}
-                                </Button>
+                                </Link>
                             ))}
                         </Box>
 
                         <Box>
-                            <Button variant="contained" sx={{ borderRadius: 50, backgroundColor: '#3f3eed', textTransform: 'capitalize', display: { xs: 'none', md: 'block' } }}>Login / Signup</Button>
+                            <Button variant="contained"  sx={{ borderRadius: 50, backgroundColor: '#3f3eed', textTransform: 'capitalize', display: { xs: 'none', md: 'block' } }}>Login / Signup</Button>
                         </Box>
 
                         {/* <Box sx={{ flexGrow: 0 }}>
