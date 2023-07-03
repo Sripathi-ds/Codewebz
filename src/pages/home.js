@@ -1,10 +1,6 @@
 import { Box, Button, Grid, Typography } from '@mui/material';
-import FrameComponent from './frame/FrameComponent';
+import FrameComponent from '../component/frame/FrameComponent';
 import Container from '@mui/material/Container';
-
-
-
-
 
 const Home = () => {
     return (
