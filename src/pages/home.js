@@ -1,6 +1,7 @@
 import { Box, Button, Grid, Typography } from '@mui/material';
 import FrameComponent from '../component/frame/FrameComponent';
 import Container from '@mui/material/Container';
+import Style from '../assets/css/frame/FrameComponent.module.css'
 
 const Home = () => {
     return (
@@ -11,10 +12,7 @@ const Home = () => {
                     <Box sx={{ mt: 5 }}>
                         <Grid container colGap={2}>
                             <Grid item xs={12} md={6}>
-                                <Box px={3}>
-                                    <FrameComponent />
-                                </Box>
-
+                                    <FrameComponent className={`${Style['afterStyle']}`}>dfgdfgdfhdgh</FrameComponent>
                             </Grid>
                             <Grid item xs={12} md={6}>
                                 <Box px={3}>
@@ -34,9 +32,6 @@ const Home = () => {
                 </Box>
 
             </Box>
-
-
-
         </Container>
     )
 }

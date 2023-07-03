@@ -8,23 +8,12 @@ import About from './pages/about'
 import AllThemes from './pages/Alltheme';
 import Order from './pages/Order';
 import Contact from './pages/Contact-us';
-import Services from './pages/services'
+import Services from './pages/services';
 
 function App() {
-
-  // const routes = useRoutes([
-  //   { path: '/pages/home', element: <Home /> },
-  //   { path: '/page/about', element: <About /> },
-  //   { path: '/page/allTheme', element: <AllThemes /> },
-  //   { path: '/page/services', element: <Services /> },
-  //   { path: '/page/order', element: <Order /> },
-  //   { path: '/page/contact', element: <Contact /> },
-  //  ]);
-  return (
+   return (
     <div>
-
       <NavbarComponent />
-      {/* {routes} */}
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />}></Route>

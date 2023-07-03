@@ -1,11 +1,8 @@
-import { Box, Hidden } from '@mui/material'
-import Style from '../../assets/css/frame/FrameComponent.module.css'
-
-const FrameComponent = () =>{
-    return(
-        <Box className={`${Style['frame_component']}`} borderRadius={3} border={3} overflow={'hidden'} borderColor={'#fff'} bgcolor={'#fff'}>
-            <Box className={`${Style['frame_fill']}`} ></Box>
-        </Box>
-    )
-}
+import styled from '@emotion/styled'
+const FrameComponent = styled.div`
+    min-height: 300px;
+    background-color:#fff;
+    border-radius:5px;
+    position:relative;  
+`
 export default FrameComponent
