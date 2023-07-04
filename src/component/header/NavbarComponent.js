@@ -16,8 +16,6 @@ import Style from '../../assets/css/header/Navbar.module.css'
 import { Link } from 'react-router-dom';
 
 
-const pages = ['Products', 'Pricing', 'Blog'];
-
 const NavPage = [{ name: 'All Themes', navLink: '/AllThemes' },
 { name: 'About us', navLink: '/about/' },
 { name: 'Services', navLink: '/services/' },
@@ -48,104 +46,103 @@ function ResponsiveAppBar() {
     };
 
     return (
-        <AppBar position="static">
-            <Container maxWidth="xl">
-                <Toolbar disableGutters>
-                    <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="a"
-                        href="/"
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'Merienda',
-                            fontWeight: 700,
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        Company
-                    </Typography>
-
-                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-                        <IconButton
-                            size="large"
-                            aria-label="account of current user"
-                            aria-controls="menu-appbar"
-                            aria-haspopup="true"
-                            onClick={handleOpenNavMenu}
-                            color="inherit"
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                        <Menu
-                            id="menu-appbar"
-                            anchorEl={anchorElNav}
-                            anchorOrigin={{
-                                vertical: 'bottom',
-                                horizontal: 'left',
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'left',
-                            }}
-                            open={Boolean(anchorElNav)}
-                            onClose={handleCloseNavMenu}
+        <Container>
+            <AppBar position="static" sx={{backgroundColor:'#fff' , marginTop:'20px' , borderRadius:'50px'}}>
+                <Container maxWidth="xl">
+                    <Toolbar disableGutters>
+                        <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 , color:'#000'}} />
+                        <Typography
+                            variant="h6"
+                            noWrap
+                            component="a"
+                            href="/"
                             sx={{
-                                display: { xs: 'block', md: 'none' },
+                                mr: 2,
+                                display: { xs: 'none', md: 'flex' },
+                                fontFamily: 'Merienda',
+                                fontWeight: 700,
+                                color: '#000',
+                                textDecoration: 'none',
                             }}
                         >
-                            {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
-                                </MenuItem>
-                            ))}
-                        </Menu>
-                    </Box>
-                    <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-                    <Typography
-                        variant="h5"
-                        noWrap
-                        component="a"
-                        href=""
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'flex', md: 'none' },
-                            flexGrow: 1,
-                            fontFamily: 'Merienda',
-                            fontWeight: 700,
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        Company
-                    </Typography>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
-                        {NavPage.map(({name , navLink}) => (
-                            <Link
-                                key={name}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, px:3,  display: 'block' }}
-                                to={navLink} 
-                                underline='none'
-                                color='#fff'
-                                className={`${Style['nav_link']}`}
+                            Company
+                        </Typography>
+
+                        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                            <IconButton
+                                size="large"
+                                aria-label="account of current user"
+                                aria-controls="menu-appbar"
+                                aria-haspopup="true"
+                                onClick={handleOpenNavMenu}
+                                color="#000"
                             >
-                                {name}
-                            </Link>
-                        ))}
-                    </Box>
-
-                    <Box >
-                        <Button variant='contained'>Log in / Sign up</Button>
-                    </Box>
-
-                </Toolbar>
-            </Container>
-        </AppBar>
-    );
-}
+                                <MenuIcon />
+                            </IconButton>
+                            <Menu
+                                id="menu-appbar"
+                                anchorEl={anchorElNav}
+                                anchorOrigin={{
+                                    vertical: 'bottom',
+                                    horizontal: 'left',
+                                }}
+                                keepMounted
+                                transformOrigin={{
+                                    vertical: 'top',
+                                    horizontal: 'left',
+                                }}
+                                open={Boolean(anchorElNav)}
+                                onClose={handleCloseNavMenu}
+                                sx={{
+                                    display: { xs: 'block', md: 'none' },
+                                }}
+                            >
+                                {NavPage.map(({ name, navLink }) => (
+                                    <MenuItem key={name} onClick={handleCloseNavMenu}  >
+                                        <Link textAlign="center" to={navLink}> {name}</Link>
+                                    </MenuItem>
+                                ))}
+                            </Menu>
+                        </Box>
+                        <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 , color:'#000'}} />
+                        <Typography
+                            variant="h5"
+                            noWrap
+                            component="a"
+                            href="/"
+                            sx={{
+                                mr: 2,
+                                display: { xs: 'flex', md: 'none' },
+                                flexGrow: 1,
+                                fontFamily: 'Merienda',
+                                fontWeight: 700,
+                                color: '#000',
+                                textDecoration: 'none',
+                            }}
+                        >
+                            Company
+                        </Typography>
+                        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
+                            {NavPage.map(({ name, navLink }) => (
+                                <Link
+                                    key={name}
+                                    onClick={handleCloseNavMenu}
+                                    sx={{ my: 2, px: 3, display: 'block' }}
+                                    to={navLink}
+                                    underline='none'
+                                    color='#000'
+                                    className={`${Style['nav_link']}`}
+                                >
+                                    {name}
+                                </Link>
+                            ))}
+                        </Box>
+                        <Box >
+                            <Button variant='contained' sx={{borderRadius:'50px', boxShadow:'unset'}} backgroundColor={'#3f3eed'}>Log in / Sign up</Button>
+                        </Box>
+                    </Toolbar>
+                </Container>
+            </AppBar>
+        </Container>
+    );}
 export default ResponsiveAppBar;

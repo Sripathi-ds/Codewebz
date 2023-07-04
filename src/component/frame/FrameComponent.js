@@ -5,4 +5,4 @@ const FrameComponent = styled.div`
     border-radius:5px;
     position:relative;  
 `
-export default FrameComponent
+export default FrameComponent;
