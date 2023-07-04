@@ -5,7 +5,7 @@ const Home_services = () => {
     return (
         <Box sx={{ my: 5 }}>
             <Typography className='text-center' color={'white'} fontSize={25} fontFamily={'Merienda'}>Our Services</Typography>
-            <Box sx={{ mt: 5 }}>
+            <Box sx={{ my: 5 }}>
                 <Grid container colGap={2}>
                     <Grid item xs={12} md={6}>
                         <Box className={`${Style['frame_Component']}`}>
