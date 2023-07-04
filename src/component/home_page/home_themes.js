@@ -39,6 +39,8 @@ const Home_themes = () => {
                         </Box>
                     </Grid>
                 </Grid>
+                <Box px={2} display={'flex'} justifyContent={'end'}><Button variant='contained' sx={{ marginTop: '30px', borderRadius: '50px',backgroundColor:'#3f3eed',textTransform: 'capitalize' }}>View more themes</Button></Box>
+
             </Box>
         </Box>
     );
