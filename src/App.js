@@ -7,7 +7,8 @@ import SignIn from './pages/accounts/SignIn';
 import Dashboard from './pages/overview/Dashboard';
 import Chat from './pages/management/chat/Chat';
 import UserList from './pages/management/users/UserList';
-
+import ProductList from './pages/management/product/ProductList';
+import VoiceTranslator from './pages/text2voice/VoiceTranslator';
 const theme = createTheme({
   palette: {
     primary: {
@@ -31,13 +32,18 @@ const theme = createTheme({
 
   },
   components: {
-    MuiMenuItem: {
+    MuiMenu: {
       styleOverrides: {
         root: {
-          backgroundColor: '#121212',
-        }
-      }
+          p: 0
+        },
+        paper: {
+          padding: "5px",
+          borderRadius: '5px'
+        },
+      },
     },
+
     MuiButton: {
       styleOverrides: {
         root: {
@@ -55,6 +61,9 @@ const theme = createTheme({
           '& *': {
             fontFamily: 'inherit',
             fontSize: 14
+          },
+          '& label[data-shrink = false]': {
+            transform: 'translate(14px, 9px) scale(1)'
           }
         }
       }
@@ -166,8 +175,10 @@ const App = () => {
           </Route>
           <Route element={<HomeLayout />} >
             <Route path='/' index={true} element={<Dashboard />}></Route>
-            <Route path='/chat' index={true} element={<Chat />}></Route>
-            <Route path='/users' index={true} element={<UserList />}></Route>
+            <Route path='/chat' element={<Chat />}></Route>
+            <Route path='/users' element={<UserList />}></Route>
+            <Route path='/productlist' element={<ProductList />}></Route>
+            <Route path='/voicetranslator' element={<VoiceTranslator />}></Route>
           </Route>
         </Routes>
       </ThemeProvider>

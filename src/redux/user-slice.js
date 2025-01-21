@@ -9,10 +9,10 @@ export const userSlice = createSlice({
     initialState,
     reducers: {
         addUser: (state, action) => {
-            state.usersList += action.payload
+            state.usersList = [...state.usersList, action.payload]
         },
     }
 })
 
-export const { } = userSlice.actions
+export const { addUser } = userSlice.actions
 export default userSlice.reducer

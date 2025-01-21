@@ -32,8 +32,8 @@ const Sidebar = ({ isSidebarMinimized }) => {
     return (
         <Box sx={{ height: '100%', '& div': { boxSizing: 'border-box' } }}>
             <Stack direction={'row'} sx={{ gap: 1, alignItems: 'center', justifyContent: isSidebarMinimized ? 'center' : 'start' }}>
-                <Box sx={{ height: 50, width: 50 }}>
-                    <Box component={'img'} src={Logo} sx={{ height: '100%', width: '100%', objectFit: 'contain' }}></Box>
+                <Box sx={{ height: 50, width: 50, maskImage: `url(${Logo})`, maskRepeat: "no-repeat", maskSize: '100%', backgroundColor: 'orange' }}>
+                    {/* <Box component={'img'} src={Logo} sx={{ height: '100%', width: '100%', objectFit: 'contain' }}></Box> */}
                 </Box>
                 <Box sx={{ display: isSidebarMinimized ? 'none' : 'inline-flex' }}>
                     <Typography variant="body1" sx={{ fontSize: 22, fontWeight: 600, }}>Codewebz</Typography>
@@ -130,7 +130,7 @@ const Sidebar = ({ isSidebarMinimized }) => {
                                 </ListItemButton>
                             </ListItem>
                             <ListItem disablePadding>
-                                <ListItemButton sx={{ ...listItemStyle }} onClick={() => navigate('/')}>
+                                <ListItemButton sx={{ ...listItemStyle }} onClick={() => navigate('/productlist')}>
                                     <ListItemIcon sx={{ color: 'inherit' }}>
                                         <ShoppingCartOutlinedIcon />
                                     </ListItemIcon>
@@ -138,11 +138,11 @@ const Sidebar = ({ isSidebarMinimized }) => {
                                 </ListItemButton>
                             </ListItem>
                             <ListItem disablePadding>
-                                <ListItemButton sx={{ ...listItemStyle }} onClick={() => navigate('/')}>
+                                <ListItemButton sx={{ ...listItemStyle }} onClick={() => navigate('/voicetranslator')}>
                                     <ListItemIcon sx={{ color: 'inherit' }}>
                                         <ChecklistOutlinedIcon />
                                     </ListItemIcon>
-                                    <ListItemText primary="Order" />
+                                    <ListItemText primary="Translator" />
                                 </ListItemButton>
                             </ListItem>
 

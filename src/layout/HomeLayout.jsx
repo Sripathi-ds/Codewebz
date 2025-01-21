@@ -27,7 +27,6 @@ const HomeLayout = () => {
                         <Box sx={{ px: 2 ,pb: 2 }}>
                             <Outlet />
                         </Box>
-
                     </Box>
                 </Stack>
             </Box >
