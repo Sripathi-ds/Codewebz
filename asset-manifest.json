@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/codewebz/static/css/main.4aff455b.css",
+    "main.js": "/codewebz/static/js/main.24795d80.js",
+    "static/js/787.30991188.chunk.js": "/codewebz/static/js/787.30991188.chunk.js",
+    "static/media/logo512.png": "/codewebz/static/media/logo512.660544300c2ebd57fba6.png",
+    "index.html": "/codewebz/index.html",
+    "main.4aff455b.css.map": "/codewebz/static/css/main.4aff455b.css.map",
+    "main.24795d80.js.map": "/codewebz/static/js/main.24795d80.js.map",
+    "787.30991188.chunk.js.map": "/codewebz/static/js/787.30991188.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4aff455b.css",
+    "static/js/main.24795d80.js"
+  ]
+}
