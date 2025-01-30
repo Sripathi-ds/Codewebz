@@ -42,7 +42,7 @@ const Sidebar = ({ isSidebarMinimized }) => {
             <Box sx={{ mt: 2, height: 'calc(100vh - 85px)', maxHeight: 'calc(100vh - 85px)', overflow: 'auto', '&::-webkit-scrollbar': { display: 'none' } }}>
                 <Accordion defaultExpanded>
                     <AccordionSummary sx={{ px: 0, display: isSidebarMinimized ? 'none' : 'block' }}>
-                        <Typography variant="body2" sx={{ textTransform: 'uppercase', fontWeight: 700, color: 'primary.main' }}>Overview</Typography>
+                        <Typography variant="body2" sx={{ textTransform: 'uppercase', fontWeight: 700, color: 'primary.main' }}>Overviews</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                         <List>
